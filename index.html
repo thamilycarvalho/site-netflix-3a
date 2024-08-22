@@ -1,48 +1,156 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<title>Alura Plus</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
 
-<body>
-<section class="principal container">
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
 
-<div class="container__caixa">
+* {
+    margin: 0;
+    padding: 0;
+}
 
-  <h1 class="container__titulo">Com o COMBO+, você pode aproveitar 
-a Alura+ e o Alura Língua por um 
-preço justo </h1> 
+.principal{
+    background-image: url("Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    aling-items:center;
+    text-aling: center;
+}
 
-<img src="img/Combo.png" alt="O combo+ é a junção do alura+
-e o Alura língua por um preço justo">
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 
-<a href="https://www.alura.com.br" class="container__botao">Assine já!</a>
-<a href="https://www.alura.com.br" class="container__botao botao_secundario">Assine somente o Alura+</a>
+.container__botao {
+ background-color:  var(--botao-azul);
+ border-radius: 5px;
+ padding: lem;
+ color: var(--branco-principal);
+ display: block;
+ text-decoration: none;
+ margin-bottom: 1em;
+}
 
-<p class="container__aviso">O valor pode variar caso a assinatura seja feita 
-em outros planos
-</p>
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
 
-</div>
-</section>
+.container__aviso{
+    font-size: 12px ;
+    padding: 0;
+    color:var(--cinza-secundario);
+}
 
-<section class="container secundario">
-<img src="IMG/Plataformas.png" alt="um monitor e um celular com a alura aberta" class="secundario__imagem">
-<div class="container__descricao">
-<h2 class="descricao__titulo>">
-Assista do seu jeito
-</h2>
-<p class="descricao__texto">
-  Aproveite a tela grande da TV ou assista no tlabet, laptop, celular e outros aparelhos. Nossa seleção de cursos não para de crescer.
-</p>
-</div>
-</section>
+.container__titulo{
+ font-size: 28px;
+ font-weight: 700;
+}
 
-</body>
-</html>
+.container{
+margin: lem 0 2em 0;
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+ align-items: center;
+ margin: 0 10em;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color:var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color:var(--cinza-secundario)
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulos {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color:var(--branco-principal);
+    margin-left: 1em;
+}
+.rodape__texto{
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.lista__link a:hover {
+    outline-color:var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color:var(--cor-de-fundo);
+}
